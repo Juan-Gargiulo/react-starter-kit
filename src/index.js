@@ -2,11 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+import { Provider } from 'react-redux';
+import { Route, Switch } from 'react-router'; // react-router v4/v5
+import { ConnectedRouter } from 'connected-react-router';
+import configureStore, { history } from './js/store/configureStore';
 import * as serviceWorker from './serviceWorker';
+
+const store = configureStore({});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <ConnectedRouter history={history}>
+        <>
+          <Switch>
+            <Route path="/">
+              <App />
+            </Route>
+          </Switch>
+        </>
+      </ConnectedRouter>
+    </Provider>
+    ,
   </React.StrictMode>,
   document.getElementById('root')
 );
