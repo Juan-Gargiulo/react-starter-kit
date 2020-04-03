@@ -1,8 +1,9 @@
 import React from 'react';
+import NavBar from 'js/views/layout/navbar';
 
 export default ({ children }) => (
   <div>
-    This is a nav
+    <NavBar />
     {children}
   </div>
 );

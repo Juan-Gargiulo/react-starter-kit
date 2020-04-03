@@ -2,14 +2,25 @@
 
 This is a pre-cofigured boilerplate which includes the following toolchain:
 
-* use [Create React App](https://github.com/facebook/create-react-app).
-* redux.
-* redux-sagas.
-* react-router 5.
-* some example routes (includes one private).
-* connected-router (route inside sagas ie.)
-* Prettier (just install extension).
-* Husky pre-commit to format code.
+- use [Create React App](https://github.com/facebook/create-react-app).
+- redux.
+- redux-sagas.
+- react-router 5.
+- some example routes (includes one private).
+- connected-router (usefull to routing in sagas ie.)
+- Prettier (just install the extension and you are ready).
+- Husky pre-commit to format code.
+
+> For now.. you can change your login status from a variable inside
+> the PrivateRoute the component to test the auth routes. When you implement your auth flow, change this reference in this component.
+
+> No CSS framework or library included, that's your choice.
+
+#### `TODO`
+
+- [ ] find a proper way to manage action creators
+
+---
 
 ### `how start`
 

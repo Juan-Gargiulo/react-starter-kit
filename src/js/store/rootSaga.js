@@ -1,13 +1,13 @@
 import { fork, all, takeEvery } from 'redux-saga/effects';
 
-export function* loggerSagas(...args) {
-  yield console.log(args);
+export function* sagaIsRuning(...args) {
+  yield console.log('redux-saga is running!');
 }
 
-export function* logger() {
-  yield takeEvery('*', loggerSagas);
+export function* loggerSaga() {
+  yield takeEvery('SAGA_IS_RUNNING', sagaIsRuning);
 }
 
 export default function* rootSaga() {
-  yield all([fork(logger)]);
+  yield all([fork(loggerSaga)]);
 }

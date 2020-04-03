@@ -21,7 +21,7 @@ export default function configureStore(preloadedState) {
 
   sagaMiddleware.run(rootSaga);
 
-  store.dispatch({ type: 'ANY_SAGAS', payload: 'sagasRunning' });
+  store.dispatch({ type: 'SAGA_IS_RUNNING' });
 
   return store;
 }
